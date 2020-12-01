@@ -1,0 +1,118 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formularios</title>
+   <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+  <script src="functions.js"></script>
+</head>
+<body>
+  <div class="forms-group row">
+    <div class="formbox col-sm-4">
+      <h3>Articulo</h3>
+      <form id="articleForm">
+        <input type="text" name="id" style="display:none;">
+        <div class="form-group">
+          <label for="code">Codigo:</label>
+          <input type="text" class="form-control" name="code">
+        </div>
+        <div class="form-group">
+          <label for="description">Descripcion:</label>
+          <textarea type="text" class="form-control" name="description"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="cost">Costo:</label>
+          <input type="number" class="form-control" name="cost" step="0.01">
+        </div>
+        <input type="button" class="btn btn-default" id="saveArticleBtn" value="Guardar"></input>
+        <input type="button" class="btn btn-default" id="deleteArticleBtn" value="Borrar"></input>
+      </form>
+    </div>
+    <div class="formbox col-sm-4">
+      <h3>Cliente</h3>
+      <form id="customerForm">
+        <input type="text" name="id" style="display:none;">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" class="form-control" name="name">
+        </div>
+        <div class="form-group">
+          <label for="branch">Sucursal:</label>
+          <input type="text" class="form-control" name="branch">
+        </div>
+        <div class="form-group">
+          <label for="rfc">RFC:</label>
+          <input type="text" class="form-control" name="rfc">
+        </div>
+        <input type="button" class="btn btn-default" id="saveCustomerBtn" value="Guardar"></input>
+        <input type="button" class="btn btn-default" id="deleteCustomerBtn" value="Borrar"></input>
+      </form>
+    </div>
+    <div class="formbox col-sm-4">
+      <h3>Proveedor</h3>
+      <form id="supplierForm">
+        <input type="text" name="id" style="display:none;">
+        <div class="form-group">
+          <label for="name">Nombre:</label>
+          <input type="text" class="form-control" name="name">
+        </div>
+        <div class="form-group">
+          <label for="currency">Moneda:</label>
+          <input type="text" class="form-control" name="currency">
+        </div>
+        <div class="form-group">
+          <label for="category">Categoría</label>
+          <input type="text" class="form-control" name="category">
+        </div>
+        <input type="button" class="btn btn-default" id="saveSupplierBtn" value="Guardar"></input>
+        <input type="button" class="btn btn-default" id="deleteSupplierBtn" value="Borrar"></input>
+      </form>
+    </div>
+  </div>
+  <div id="articlesList">
+    <table id="articles">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>CODE</th>
+          <th>DESCRIPTION</th>
+          <th>COST</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div id="customersList">
+    <table id="customers">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>NAME</th>
+          <th>BRANCH</th>
+          <th>RFC</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div id="suppliersList">
+    <table id="suppliers">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>NAME</th>
+          <th>CURRENCY</th>
+          <th>CATEGORY</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+</body>
+</html>
